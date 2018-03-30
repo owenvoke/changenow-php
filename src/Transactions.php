@@ -12,11 +12,14 @@ class Transactions
     /**
      * Retrieve transactions initiated by the active user.
      *
+     * @param array|null $parameters
      * @return mixed
      */
-    public function get()
+    public function get(array $parameters = [])
     {
-        return $this->call('transactions/'.$this->apiKey);
+        $query = http_build_query($parameters);
+
+        return $this->call('transactions/'.$this->apiKey.'?'.$query);
     }
 
     /**
