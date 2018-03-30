@@ -7,7 +7,7 @@
 [![Code Coverage][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-A PHP wrapper for the ChangeNOW API.
+A PHP wrapper for the [ChangeNOW] API.
 
 ## Install
 
@@ -111,6 +111,8 @@ If you discover any security related issues, please email owzie123@gmail.com ins
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[changenow]: https://changenow.io
 
 [ico-version]: https://img.shields.io/packagist/v/pxgamer/changenow.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
