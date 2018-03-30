@@ -19,9 +19,70 @@ $ composer require pxgamer/changenow
 
 ## Usage
 
+**Creating instances**
+
 ```php
-$skeleton = new pxgamer\ChangeNow();
-echo $skeleton->echoPhrase('Hello, League!');
+use pxgamer\ChangeNow\{Currencies,Transactions};
+
+$currencies = new Currencies();
+$transactions = new Transactions();
+```
+
+**Retrieve an array of currency `stdClass` instances**
+
+These contain the following information:
+
+- ticker
+- name
+- image
+
+```php
+$currencies->get();
+```
+
+**Retrieve the minimum amount required to convert between 2 currencies**
+
+```php
+$currencies->minimumAmount('btc', 'etc');
+```
+
+**Retrieve the estimated exchange value between 2 currencies**
+
+```php
+$currencies->exchangeAmount('btc', 'etc', 1.0);
+```
+
+**Retrieve an array of transactions**
+
+Returns an array of transaction `stdClass` instances containing the following values:
+
+- id
+- status
+- payinConfirmations
+- hash
+- payinHash
+- payoutHash
+- payinAddress
+- payoutAddress
+- payinExtraId
+- payoutExtraId
+- fromCurrency
+- toCurrency
+- amountSend
+- amountReceive
+- networkFee
+- updatedAt
+
+```php
+$transactions->get();
+```
+
+**Retrieve a single transaction's status by ID**
+
+Returns a transaction status string.
+
+```php
+$transactions->status('id');
 ```
 
 ## Change log
