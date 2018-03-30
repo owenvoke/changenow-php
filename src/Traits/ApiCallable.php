@@ -38,7 +38,7 @@ trait ApiCallable
     {
         return \GuzzleHttp\json_decode(
             $this->client
-                ->post($endpoint)
+                ->get($endpoint)
                 ->getBody()
                 ->getContents()
         );

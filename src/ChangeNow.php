@@ -14,5 +14,5 @@ class ChangeNow
     /**
      * The base URI for the ChangeNow API.
      */
-    public const API_BASE_URI = 'https://changenow.io/api/v1';
+    public const API_BASE_URI = 'https://changenow.io/api/v1/';
 }
