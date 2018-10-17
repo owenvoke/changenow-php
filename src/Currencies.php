@@ -17,9 +17,14 @@ class Currencies
      */
     public function get(bool $activeOnly = false)
     {
+        $data = [];
+        if ($activeOnly) {
+            $data['active'] = true;
+        }
+        
         return $this->call(
-            'currencies'.
-            ($activeOnly ? '?active=true' : '')
+            'currencies',
+            $data
         );
     }
 
