@@ -71,7 +71,7 @@ class CurrenciesTest extends TestCase
         $result = $this->currencies->exchangeAmount('btc', 'etc', 1.0);
 
         $this->assertObjectHasAttribute('estimatedAmount', $result);
-        $this->assertObjectHasAttribute('serviceCommission', $result);
         $this->assertObjectHasAttribute('transactionSpeedForecast', $result);
+        $this->assertObjectHasAttribute('warningMessage', $result);
     }
 }
