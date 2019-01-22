@@ -17,9 +17,7 @@ class Transactions
      */
     public function get(array $parameters = [])
     {
-        $query = http_build_query($parameters);
-
-        return $this->call('transactions/'.$this->apiKey.'?'.$query);
+        return $this->call('transactions/'.$this->apiKey, $parameters);
     }
 
     /**
